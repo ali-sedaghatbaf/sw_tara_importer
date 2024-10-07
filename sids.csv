@@ -1,0 +1,18 @@
+Item Type,Item SID,Part Type,Part SID,Attribute Type,Attribute SID
+TARA,SI0167,Threat Analysis Area,SP0318,Safety Impact,SA0054
+Conceptual Architecture,SI0227,Security Item Definition,SP0326,Privacy Impact,SA0055
+Security Property Catalog,SI0226,Security Property List,SP0265,Financial Impact,SA0053
+Conceptual System/Component,SI0228,Included System/Component,SP0327,Operational Impact,SA0052
+Damage Scenario,SI0168,Damage Scenario,SP0270,Damage Argument,SA0798
+Threat Scenario,SI0172,Analyzed Asset,SP0260,Damage Scenario,SA0520
+Attack Vector,SI0202,Violates Security Property,SP0269,Threat Argument,SA0864
+Attack Step,SI0174,Threat Scenario,SP0263,Risk Treatment,SA0797
+Attack And,SI0174,Leads to Damage Scenario,SP0271,Vector Type,SA0513
+Security Goal,SI0166,Attack Vector,SP0262,Elapsed Time,SA0060
+Security Claim,SI0426,Attack Step,SP0262,Specialist Expertise,SA0063
+Security Requirement,SI0187,Attack And,SP0173,Attack Knowledge,SA0062
+Security Property,SI0225,Security Goal,SP0268,Window of Opportunity,SA0064
+,,Security Claim,SP0268,Equipment,SA0061
+,,Security Requirement,SP0591,Attack Step Argument,SA0865
+,,On Threat Scenario,SP0264,,
+,,Security Property,SP0325,,
