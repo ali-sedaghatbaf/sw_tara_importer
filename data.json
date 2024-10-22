@@ -1,0 +1,1460 @@
+{
+    "assets": [
+        {
+            "id": 1,
+            "name": "<text>",
+            "security_properties": [
+                {
+                    "name": "Authentication",
+                    "damage": {
+                        "id": "Damage Scenario for Authentication of Asset 1",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Authentication of Asset 1",
+                        "scenario": "<text>",
+                        "path": "step1\nstep2\nstep3",
+                        "time": 4,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Retention",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Authentication of Asset 1",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Authentication of Asset 1",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Authentication of Asset 1",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 10,
+                                "equipment": 4,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Integrity",
+                    "damage": {
+                        "id": "Damage Scenario for Integrity of Asset 1",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Integrity of Asset 1",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 1,
+                        "equipment": 0,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Integrity of Asset 1",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Integrity of Asset 1",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Integrity of Asset 1",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 10,
+                                "equipment": 4,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Non-repudiation",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Non-repudiation of Asset 1",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Confidentiality",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Confidentiality of Asset 1",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Availablity ",
+                    "damage": {
+                        "id": "Damage Scenario for Availablity  of Asset 1",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Availablity  of Asset 1",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 3,
+                        "knowledge": 3,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Availablity  of Asset 1",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Availablity  of Asset 1",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Availablity  of Asset 1",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Authorization",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Authorization of Asset 1",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                }
+            ],
+            "attack_vector": "Local",
+            "CAL": "CAL2"
+        },
+        {
+            "id": 2,
+            "name": "<text>",
+            "security_properties": [
+                {
+                    "name": "Authentication",
+                    "damage": {
+                        "id": "Damage Scenario for Authentication of Asset 2",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Authentication of Asset 2",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 3,
+                        "knowledge": 3,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Retention",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Authentication of Asset 2",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Authentication of Asset 2",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Authentication of Asset 2",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Integrity",
+                    "damage": {
+                        "id": "Damage Scenario for Integrity of Asset 2",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Integrity of Asset 2",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 4,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Integrity of Asset 2",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Integrity of Asset 2",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Integrity of Asset 2",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Non-repudiation",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Non-repudiation of Asset 2",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Confidentiality",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Confidentiality of Asset 2",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Availablity ",
+                    "damage": {
+                        "id": "Damage Scenario for Availablity  of Asset 2",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Availablity  of Asset 2",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 1,
+                        "equipment": 0,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Availablity  of Asset 2",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Availablity  of Asset 2",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Availablity  of Asset 2",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 10,
+                                "equipment": 4,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Authorization",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Authorization of Asset 2",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                }
+            ],
+            "attack_vector": "Local",
+            "CAL": "CAL2"
+        },
+        {
+            "id": 3,
+            "name": "<text>",
+            "security_properties": [
+                {
+                    "name": "Authentication",
+                    "damage": {
+                        "id": "Damage Scenario for Authentication of Asset 3",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Authentication of Asset 3",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 4,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Retention",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Authentication of Asset 3",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Authentication of Asset 3",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Authentication of Asset 3",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Integrity",
+                    "damage": {
+                        "id": "Damage Scenario for Integrity of Asset 3",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Integrity of Asset 3",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 1,
+                        "equipment": 0,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Integrity of Asset 3",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Integrity of Asset 3",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Integrity of Asset 3",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 10,
+                                "equipment": 4,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Non-repudiation",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Non-repudiation of Asset 3",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Confidentiality",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Confidentiality of Asset 3",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Availablity ",
+                    "damage": {
+                        "id": "Damage Scenario for Availablity  of Asset 3",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Availablity  of Asset 3",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 3,
+                        "knowledge": 3,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Availablity  of Asset 3",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Availablity  of Asset 3",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Availablity  of Asset 3",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Authorization",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Authorization of Asset 3",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                }
+            ],
+            "attack_vector": "Local",
+            "CAL": "CAL2"
+        },
+        {
+            "id": 4,
+            "name": "<text>",
+            "security_properties": [
+                {
+                    "name": "Authentication",
+                    "damage": {
+                        "id": "Damage Scenario for Authentication of Asset 4",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Authentication of Asset 4",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 3,
+                        "knowledge": 3,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Retention",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Authentication of Asset 4",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Authentication of Asset 4",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Authentication of Asset 4",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Integrity",
+                    "damage": {
+                        "id": "Damage Scenario for Integrity of Asset 4",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Integrity of Asset 4",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 4,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Integrity of Asset 4",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Integrity of Asset 4",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Integrity of Asset 4",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Non-repudiation",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Non-repudiation of Asset 4",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Confidentiality",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Confidentiality of Asset 4",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Availablity ",
+                    "damage": {
+                        "id": "Damage Scenario for Availablity  of Asset 4",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Availablity  of Asset 4",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 1,
+                        "equipment": 0,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Availablity  of Asset 4",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Availablity  of Asset 4",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Availablity  of Asset 4",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 10,
+                                "equipment": 4,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Authorization",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Authorization of Asset 4",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                }
+            ],
+            "attack_vector": "Local",
+            "CAL": "CAL2"
+        },
+        {
+            "id": 5,
+            "name": "<text>",
+            "security_properties": [
+                {
+                    "name": "Authentication",
+                    "damage": {
+                        "id": "Damage Scenario for Authentication of Asset 5",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Authentication of Asset 5",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 3,
+                        "knowledge": 3,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Retention",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Authentication of Asset 5",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Authentication of Asset 5",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Authentication of Asset 5",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Integrity",
+                    "damage": {
+                        "id": "Damage Scenario for Integrity of Asset 5",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Integrity of Asset 5",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 4,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Integrity of Asset 5",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Integrity of Asset 5",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Integrity of Asset 5",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Non-repudiation",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Non-repudiation of Asset 5",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Confidentiality",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Confidentiality of Asset 5",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Availablity ",
+                    "damage": {
+                        "id": "Damage Scenario for Availablity  of Asset 5",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Availablity  of Asset 5",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 1,
+                        "equipment": 0,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Availablity  of Asset 5",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Availablity  of Asset 5",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Availablity  of Asset 5",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 10,
+                                "equipment": 4,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Authorization",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Authorization of Asset 5",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                }
+            ],
+            "attack_vector": "Local",
+            "CAL": "CAL2"
+        },
+        {
+            "id": 6,
+            "name": "<text>",
+            "security_properties": [
+                {
+                    "name": "Authentication",
+                    "damage": {
+                        "id": "Damage Scenario for Authentication of Asset 6",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Authentication of Asset 6",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 3,
+                        "knowledge": 3,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Retention",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Authentication of Asset 6",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Authentication of Asset 6",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Authentication of Asset 6",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Integrity",
+                    "damage": {
+                        "id": "Damage Scenario for Integrity of Asset 6",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Integrity of Asset 6",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 4,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Integrity of Asset 6",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Integrity of Asset 6",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Integrity of Asset 6",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Non-repudiation",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Non-repudiation of Asset 6",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Confidentiality",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Confidentiality of Asset 6",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Availablity ",
+                    "damage": {
+                        "id": "Damage Scenario for Availablity  of Asset 6",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Availablity  of Asset 6",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 1,
+                        "equipment": 0,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Availablity  of Asset 6",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Availablity  of Asset 6",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Availablity  of Asset 6",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 10,
+                                "equipment": 4,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Authorization",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Authorization of Asset 6",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                }
+            ],
+            "attack_vector": "Local",
+            "CAL": "CAL2"
+        },
+        {
+            "id": 7,
+            "name": "<text>",
+            "security_properties": [
+                {
+                    "name": "Authentication",
+                    "damage": {
+                        "id": "Damage Scenario for Authentication of Asset 7",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Authentication of Asset 7",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 4,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Adjacent",
+                        "risk": {
+                            "treatment": "Retention",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Authentication of Asset 7",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Authentication of Asset 7",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Authentication of Asset 7",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Integrity",
+                    "damage": {
+                        "id": "Damage Scenario for Integrity of Asset 7",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Integrity of Asset 7",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 1,
+                        "equipment": 0,
+                        "argument": "<text>",
+                        "vector": "Adjacent",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Integrity of Asset 7",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Integrity of Asset 7",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Integrity of Asset 7",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 10,
+                                "equipment": 4,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Non-repudiation",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Non-repudiation of Asset 7",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Confidentiality",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Confidentiality of Asset 7",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Availablity ",
+                    "damage": {
+                        "id": "Damage Scenario for Availablity  of Asset 7",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Availablity  of Asset 7",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 3,
+                        "knowledge": 3,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Adjacent",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Availablity  of Asset 7",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Availablity  of Asset 7",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Availablity  of Asset 7",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Authorization",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Authorization of Asset 7",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                }
+            ],
+            "attack_vector": "Adjacent",
+            "CAL": "CAL3"
+        },
+        {
+            "id": 8,
+            "name": "<text>",
+            "security_properties": [
+                {
+                    "name": "Authentication",
+                    "damage": {
+                        "id": "Damage Scenario for Authentication of Asset 8",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Authentication of Asset 8",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 4,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Retention",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Authentication of Asset 8",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Authentication of Asset 8",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Authentication of Asset 8",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Integrity",
+                    "damage": {
+                        "id": "Damage Scenario for Integrity of Asset 8",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Integrity of Asset 8",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 6,
+                        "knowledge": 7,
+                        "window": 1,
+                        "equipment": 0,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Integrity of Asset 8",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Integrity of Asset 8",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Integrity of Asset 8",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 10,
+                                "equipment": 4,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Non-repudiation",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Non-repudiation of Asset 8",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Confidentiality",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Confidentiality of Asset 8",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                },
+                {
+                    "name": "Availablity ",
+                    "damage": {
+                        "id": "Damage Scenario for Availablity  of Asset 8",
+                        "scenario": "<text>",
+                        "impact": {
+                            "S": "Major",
+                            "F": "",
+                            "O": "Major",
+                            "P": ""
+                        },
+                        "argument": "<text>"
+                    },
+                    "nondamage": null,
+                    "threat": {
+                        "id": "Threat Scenario for Availablity  of Asset 8",
+                        "scenario": "<text>",
+                        "path": "<text>",
+                        "time": 1,
+                        "expertise": 3,
+                        "knowledge": 3,
+                        "window": 4,
+                        "equipment": 4,
+                        "argument": "<text>",
+                        "vector": "Local",
+                        "risk": {
+                            "treatment": "Reduction",
+                            "goal": {
+                                "id": "Cybersecurity Goal for Availablity  of Asset 8",
+                                "description": "<text>"
+                            },
+                            "claim": {
+                                "id": "Cybersecurity Claim for Availablity  of Asset 8",
+                                "description": "<text>"
+                            },
+                            "requirement": {
+                                "id": "Cybersecurity Requirement for Availablity  of Asset 8",
+                                "control": "<text>",
+                                "time": 4,
+                                "expertise": 6,
+                                "knowledge": 7,
+                                "window": 4,
+                                "equipment": 7,
+                                "argument": "<text>"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Authorization",
+                    "damage": null,
+                    "nondamage": {
+                        "id": "Non-Damage Scenario for Authorization of Asset 8",
+                        "scenario": "N/A-Can't find any relevant damages.",
+                        "argument": "<text>"
+                    },
+                    "threat": null
+                }
+            ],
+            "attack_vector": "Local",
+            "CAL": "CAL2"
+        }
+    ]
+}

@@ -38,16 +38,45 @@ def get_credentials():
 
 
 def get_handles():
+    handles = dict()
+    handles["cs_lib"] = st.text_input(
+        "Cybersecurity Library",
+        value=st.secrets["SW_CSLIB"],
+    ).split("/")[-1]
     col1, col2 = st.columns(2)
     with col1:
-        cs_handle = st.text_input(
+        handles["cs_area"] = st.text_input(
             "Cybersecurity Area", value=st.secrets["SW_CSAREA"]
         ).split("/")[-1]
     with col2:
-        cslib_handle = st.text_input(
-            "Cybersecurity Library", value=st.secrets["SW_CSLIB"]
+        handles["cs_props"] = st.text_input(
+            "Cybersecurity Property Catalog",
+            value=st.secrets["SW_CSPROP"],
         ).split("/")[-1]
-    return cs_handle, cslib_handle
+    col1, col2 = st.columns(2)
+    with col1:
+        handles["local_vector"] = st.text_input(
+            "Local Attack Vector",
+            value=st.secrets["SW_LVECTOR"],
+        ).split("/")[-1]
+    with col2:
+        handles["adjacent_vector"] = st.text_input(
+            "Adjacent Attack Vector",
+            value=st.secrets["SW_AVECTOR"],
+        ).split("/")[-1]
+    col1, col2 = st.columns(2)
+    with col1:
+        handles["physical_vector"] = st.text_input(
+            "Physical Attack Vector",
+            value=st.secrets["SW_PVECTOR"],
+        ).split("/")[-1]
+    with col2:
+        handles["network_vector"] = st.text_input(
+            "Network Attack Vector",
+            value=st.secrets["SW_NVECTOR"],
+        ).split("/")[-1]
+
+    return handles
 
 
 def get_sids():
@@ -89,10 +118,9 @@ def render_page():
 
     st.header(page_title)
     st.divider()
-    st.subheader("1. Upload the input file")
+    st.subheader("1. Upload Excel file")
 
     uploaded_file = get_uploader()
-
     if uploaded_file is not None:
         st.subheader("2. Connect to SystemWeaver")
 
@@ -118,21 +146,21 @@ def render_page():
                         del st.session_state.sw_endpoint
                     return
         if "sw_endpoint" in st.session_state and st.session_state.sw_endpoint:
+
             st.subheader("3. Import data")
-            cs_handle, cslib_handle = get_handles()
+            handles = get_handles()
 
             st.session_state.sids = pd.read_csv("sids.csv")
             with st.expander("SystemWeaver IDs"):
                 st.session_state.sids = get_sids()
-            st.session_state.sids.to_csv("sids.csv", index=False)
+                st.session_state.sids.to_csv("sids.csv", index=False)
             if st.button("Import"):
                 with st.spinner("Transferring data to SystemWeaver"):
 
                     try:
                         excel_adapter = ExcelAdapter()
                         data = {
-                            "cs_handle": cs_handle,
-                            "cslib_handle": cslib_handle,
+                            "handles": handles,
                             "tara_name": uploaded_file.name.split(".")[0],
                             **excel_adapter.read_data(uploaded_file, "Polestar"),
                         }

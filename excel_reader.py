@@ -14,19 +14,30 @@ class ExcelAdapter:
         return None
 
     def __read_polestar_data(self, file):
+        risk_treatment_options = {
+            "Avoiding": "Avoidance",
+            "Retaining": "Retention",
+            "Sharing": "Sharing",
+            "Reducing": "Reduction",
+        }
+
         data = pd.read_excel(file, sheet_name="TARA")
-        data.ffill(inplace=True)
-        data.bfill(inplace=True)
-        asset_ids = data["Asset Id"].unique()
+        data.loc[:, data.columns != "Impact Rating"] = data.loc[
+            :, data.columns != "Impact Rating"
+        ].ffill()
+        data.loc[:, data.columns != "Impact Rating"] = data.loc[
+            :, data.columns != "Impact Rating"
+        ].bfill()
+        asset_ids = data["Asset Id"].astype(int).unique()
         assets = []
         for asset_id in asset_ids:
             asset_data = data[data["Asset Id"] == asset_id]
-
+            asset_name = asset_data.iloc[0]["Asset"]
             asset_properties = asset_data["Security Properties"].unique()
             props = []
             for asset_property in asset_properties:
                 property_data = asset_data[
-                    asset_data["Security Properties"] == asset_property
+                    asset_data["Security Properties"] == asset_property.strip()
                 ]
 
                 damage_data = property_data[
@@ -38,18 +49,25 @@ class ExcelAdapter:
                     ]
                 ]
 
-                damage_data = damage_data[
-                    ~damage_data["Damage Scenario"].str.contains("N/A")
-                ]
                 damage = None
+                nondamage = None
                 if damage_data.shape[0] > 0:
-                    damage = dict(
-                        scenario=damage_data.iloc[0]["Damage Scenario"],
-                        impact=damage_data.set_index("Impact Type")[
-                            "Impact Rating"
-                        ].to_dict(),
-                        argument=damage_data.iloc[0]["Argument"],
-                    )
+                    damage_data = damage_data.fillna("")
+                    if "N/A" in damage_data.iloc[0]["Damage Scenario"]:
+                        nondamage = dict(
+                            id=f"Non-Damage Scenario for {asset_property} of Asset {asset_id}",
+                            scenario=damage_data.iloc[0]["Damage Scenario"],
+                            argument=damage_data.iloc[0]["Argument"],
+                        )
+                    else:
+                        damage = dict(
+                            id=f"Damage Scenario for {asset_property} of Asset {asset_id}",
+                            scenario=damage_data.iloc[0]["Damage Scenario"],
+                            impact=damage_data.set_index("Impact Type")[
+                                "Impact Rating"
+                            ].to_dict(),
+                            argument=damage_data.iloc[0]["Argument"],
+                        )
                 threat_data = property_data[
                     [
                         "Threat Scenario",
@@ -69,18 +87,39 @@ class ExcelAdapter:
                 ]
                 threat = None
                 if threat_data.shape[0] > 0:
+                    first_row = threat_data.iloc[0]
+
                     threat = dict(
-                        scenario=threat_data.iloc[0]["Threat Scenario"],
-                        path=threat_data.iloc[0]["Attack Path"],
-                        time=int(threat_data.iloc[0]["Elapsed Time"]),
-                        expertise=int(threat_data.iloc[0]["Specialist Expertise"]),
-                        knowledge=int(
-                            threat_data.iloc[0]["Knowledge of the item or component"]
+                        id=f"Threat Scenario for {asset_property} of Asset {asset_id}",
+                        scenario=first_row["Threat Scenario"],
+                        path=first_row["Attack Path"],
+                        time=(
+                            int(first_row["Elapsed Time"])
+                            if pd.notna(first_row["Elapsed Time"])
+                            else None
                         ),
-                        window=int(threat_data.iloc[0]["Window of Opportunity"]),
-                        equipment=int(threat_data.iloc[0]["Equipment"]),
-                        argument=threat_data.iloc[0]["Argument.1"],
-                        vector=threat_data.iloc[0]["Attack Vector"],
+                        expertise=(
+                            int(first_row["Specialist Expertise"])
+                            if pd.notna(first_row["Specialist Expertise"])
+                            else None
+                        ),
+                        knowledge=(
+                            int(first_row["Knowledge of the item or component"])
+                            if pd.notna(first_row["Knowledge of the item or component"])
+                            else None
+                        ),
+                        window=(
+                            int(first_row["Window of Opportunity"])
+                            if pd.notna(first_row["Window of Opportunity"])
+                            else None
+                        ),
+                        equipment=(
+                            int(first_row["Equipment"])
+                            if pd.notna(first_row["Equipment"])
+                            else None
+                        ),
+                        argument=first_row["Argument.1"],
+                        vector=first_row["Attack Vector"],
                     )
                     risk_data = property_data[
                         [
@@ -98,10 +137,20 @@ class ExcelAdapter:
                     ]
                     risk = None
                     if risk_data.shape[0] > 0:
+                        first_row = risk_data.iloc[0]
+
                         risk = dict(
-                            treatment=risk_data.iloc[0]["Risk Treatment"],
-                            goal=risk_data.iloc[0]["Security Goal"],
-                            claim=risk_data.iloc[0]["Security Claim"],
+                            treatment=risk_treatment_options[
+                                first_row["Risk Treatment"].strip()
+                            ],
+                            goal=dict(
+                                id=f"Cybersecurity Goal for {asset_property} of Asset {asset_id}",
+                                description=first_row["Security Goal"],
+                            ),
+                            claim=dict(
+                                id=f"Cybersecurity Claim for {asset_property} of Asset {asset_id}",
+                                description=first_row["Security Claim"],
+                            ),
                         )
                         requirement = None
                         requirement_data = risk_data[
@@ -116,38 +165,66 @@ class ExcelAdapter:
                             ]
                         ]
                         if requirement_data.shape[0] > 0:
+
                             requirement = dict(
-                                control=risk_data.iloc[0]["CS concept"],
-                                time=int(risk_data.iloc[0]["Elapsed Time.1"]),
-                                expertise=int(
-                                    risk_data.iloc[0]["Specialist Expertise.1"]
+                                id=f"Cybersecurity Requirement for {asset_property} of Asset {asset_id}",
+                                control=first_row["CS concept"],
+                                time=(
+                                    int(first_row["Elapsed Time.1"])
+                                    if pd.notna(first_row["Elapsed Time.1"])
+                                    else None
                                 ),
-                                knowledge=int(
-                                    risk_data.iloc[0][
-                                        "Knowledge of the item or component.1"
-                                    ]
+                                expertise=(
+                                    int(first_row["Specialist Expertise.1"])
+                                    if pd.notna(first_row["Specialist Expertise.1"])
+                                    else None
                                 ),
-                                window=int(
-                                    risk_data.iloc[0]["Window of Opportunity.1"]
+                                knowledge=(
+                                    int(
+                                        first_row[
+                                            "Knowledge of the item or component.1"
+                                        ]
+                                    )
+                                    if pd.notna(
+                                        first_row[
+                                            "Knowledge of the item or component.1"
+                                        ]
+                                    )
+                                    else None
                                 ),
-                                equipment=int(risk_data.iloc[0]["Equipment.1"]),
-                                argument=risk_data.iloc[0]["Argument.2"],
+                                window=(
+                                    int(first_row["Window of Opportunity.1"])
+                                    if pd.notna(first_row["Window of Opportunity.1"])
+                                    else None
+                                ),
+                                equipment=(
+                                    int(first_row["Equipment.1"])
+                                    if pd.notna(first_row["Equipment.1"])
+                                    else None
+                                ),
+                                argument=first_row["Argument.2"],
                             )
 
                         risk["requirement"] = requirement
 
                     threat["risk"] = risk
 
-                prop = dict(name=asset_property, damage=damage, threat=threat)
+                prop = dict(
+                    name=asset_property,
+                    damage=damage,
+                    nondamage=nondamage,
+                    threat=threat,
+                )
                 props.append(prop)
+
             asset = dict(
                 id=int(asset_id),
-                name=asset_data.iloc[0]["Asset"],
+                name=asset_name,
                 security_properties=props,
                 attack_vector=asset_data.iloc[0]["Attack Vector"],
                 CAL=asset_data.iloc[0]["CAL"],
             )
             assets.append(asset)
-        """ with open("data.json", "w") as file:
-            json.dump({"assets": assets}, file, indent=4) """
+        # with open("data.json", "w") as file:
+        #    json.dump({"assets": assets}, file, indent=4)
         return {"assets": assets}
